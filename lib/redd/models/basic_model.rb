@@ -21,7 +21,7 @@ module Redd
       # @param attributes [Hash] the class's attributes
       def initialize(client, attributes = {})
         @client = client
-        @attributes = attributes
+        @attributes = attributes.with_indifferent_access
         after_initialize
       end
 
